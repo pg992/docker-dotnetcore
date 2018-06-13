@@ -2,6 +2,8 @@ FROM microsoft/aspnetcore-build:2.0 AS build-env
 WORKDIR /app
 EXPOSE 80
 
+LABEL maintainer="petar.gjeorgiev@interworks.com.mk"
+
 # Copy csproj and restore as distinct layers
 COPY *.csproj ./
 RUN dotnet restore
